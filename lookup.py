@@ -27,6 +27,7 @@ def lookup(bot, event, *args):
     spreadsheet_url = bot.get_config_suboption(event.conv_id, 'spreadsheet_url')
     table_class = "waffle" # Name of table class to search. Note that 'waffle' seems to be the default for all spreadsheets
     search = 1
+    
 
     if args[0].startswith('help'):
         htmlmessage = _('This is where the message will be displayed when you ask for help')
@@ -37,7 +38,17 @@ def lookup(bot, event, *args):
     else:
         counter_max = 50
         keyword = ' '.join(args)
-    
+        
+
+    if 'this' in args[]
+        week = 1
+    elif 'next' in args[]
+        week = 2
+    else
+        week = 0 #defaults to search all
+
+    print week
+
     if search == 1:
         htmlmessage = _('Results for keyword <b>{}</b>:<br />').format(keyword)
 
